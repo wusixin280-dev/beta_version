@@ -1,0 +1,17 @@
+game_window:
+  # 注意：游戏客户端原生窗口标题末尾自带两个空格，请勿删除
+  name: "三角洲行动  "
+  class: "UnrealWindow"
+  base_resolution: [1920, 1080] # 基准分辨率 [宽, 高]，用于多分辨率下缩放计算 ROI
+
+# 截图区域 (基于 1920x1080)
+regions:
+  in_game:
+    small_map: [27, 46, 302, 321] # ROI [x1, y1, x2, y2] 小地图
+
+# 地图配置
+maps:
+  zero_dam:
+    image: "assets/maps/zero_dam.png"
+    npz_data: "assets/maps/zero_dam.npz"
+    route: "config/routes/zero_dam.yaml" # 已被 HotReload 的 exclude_dirs 排除，按需单独读取
